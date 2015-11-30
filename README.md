@@ -25,6 +25,6 @@ and regard how the end and beginning of the original book join seamlessly into w
 page in the new edition.
 
 The tenth anniversary meeting of my _Finnegans Wake_ reading group, Allforabit Funferall, occurred the 
-day before the NaNoGenMo 2015 deadline. I generated random versions of the Wake for all eight of us. Those
-editions are included in this repo for people who would rather not run the Perl script.
+day before the NaNoGenMo 2015 deadline. I generated random versions of the Wake for all eight of us attending.
+Those editions are included in this repo for people who would rather not run the Perl script.
 
