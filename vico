@@ -1,0 +1,53 @@
+#!/usr/bin/perl -w
+# vico, Copyright 2015 Ron Hale-Evans.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+$in_file = "fwin.txt";
+$out_file = "fwout.txt";
+
+open (IN_FILE, "< ./$in_file")
+    or die "Couldn't open input file: $!\n";
+
+open (OUT_FILE, "> ./$out_file")
+    or die "Couldn't open output file: $!\n";
+
+# Read in whole book as one big chunk
+$temp = $/;
+undef $/;
+$etext = <IN_FILE>;
+$/ = $temp;
+
+# Break the book into lines and pick a random line
+@lines = split /^/m, $etext;
+$linecount = $#lines;
+$startline =  int(rand($linecount));
+
+# Print from the random line to the usual end of FW 
+# into the output file
+for ($curline = $startline; $curline < $linecount; $curline++) 
+{
+    print OUT_FILE "$lines[$curline]";
+}
+
+# Print from the usual start of FW to just before the random line
+# into the output file
+for ($curline = 0; $curline < $startline; $curline++) 
+{
+    print OUT_FILE "$lines[$curline]";
+}
+
+# Clean up.
+close OUT_FILE;
+close IN_FILE;
