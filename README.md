@@ -3,7 +3,7 @@ NaNoGenMo2015 entry
 
 My first NaNoGenMo entry, a Perl script now called `finnegansways`, was initially a mere proof of concept. It only had the `--vico` option below. I've since added a second command-line option, `--poetry`.
 
-People who've read, or even started, the Wake know that the last sentence of the book is broken in half,
+People who've read, or even started, _Finnegans Wake_ know that the last sentence of the book is broken in half,
 and wraps around to become the first sentence, beginning with the word "riverrun".
 The entire book is an endless cycle.
 Joyce based it partly on the theories of history developed by the 
